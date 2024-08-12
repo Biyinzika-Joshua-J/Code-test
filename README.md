@@ -8,7 +8,7 @@
 ```
 
 ### 2. Install dependencies
-Note: This command should be executed in the root directory name "Code-test"
+Note: This command should be executed in the root directory named "Code-test"
 
 ```bash
  npm i
@@ -24,7 +24,7 @@ To run the code, execute this command in your terminal. Please ensure your worki
 ## Testing
 Vitest is used for the unit tests. The test script has 30 unit tests separated into four suites, each testing a different case.
 
-There are two ways run the test script.
+There are two ways to run the test script.
 
 The first:
 ```bash
@@ -37,11 +37,11 @@ The second - uses vitest ui:
 ```
 
 ## My Approach
-My function handles four cases:
+The function handles four cases:
 
 **1st Case: When there is no padding applied**
 
-This case is so if majority of the elements in the input array are single digits. 
+This case is so if the majority of the elements in the input array are single digits. 
 
 ```typescript
   // case 1: no padding was used
@@ -60,7 +60,7 @@ This case is so if majority of the elements in the input array are single digits
 
 **2nd Case: When consistent padding is present**
 
-This case is handled when the majority of the elements in the input array have a consistent padding. If that's isn't the case, execution is passed on to the 3rd case which handles inconsistent padding.
+This case is handled when the majority of the elements in the input array have a consistent padding. If that isn't the case, execution is passed on to the 3rd case which handles inconsistent padding.
 
 ```typescript
   // case 2: consistent padding exists
@@ -80,7 +80,7 @@ This case is handled when the majority of the elements in the input array have a
 
 **3rd Case: Inconsistent padding**
 
-Values that don't have consistent padding usually end up here. In this case, I loop through all the strings and calaculate the padding. If the resulting padding results vary by more than one instance, then I conclude that the padding isn't consistent.
+Values that don't have consistent padding usually end up here. In this case, I loop through all the strings and calaculate the padding. If the results vary by more than one instance, then I conclude that the padding isn't consistent.
 
 ```typescript
     // case 3: inconsistent padding
@@ -106,6 +106,7 @@ This last case handles values which have no observed padding.
 
       return -paddingLength;
 ```
+
 ## Time and space complexity
 
 ### Time
@@ -116,7 +117,7 @@ Then in the **analyzeStrings** function, the first case takes O(n) time iteratin
 
 The second case has two nested for loops iterating over the keys of the hash map. This takes O(n^2) time.
 
-The third case loops through the strings array and also calls **getPaddingLength** function on each iteration which takes O(s) time. Where s is the length of the string. Overall it takes O(n * s) time, where n is the total number of elements present in the input array.
+The third case loops through the strings array and also calls **getPaddingLength** function on each iteration which takes O(s) time, where s is the length of the string. Overall it takes O(n * s) time, where n is the total number of elements (strings) present in the input array.
 
 Finally, the fourth case again loops through the input array resulting into O(n) time.
 

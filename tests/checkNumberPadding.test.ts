@@ -60,8 +60,6 @@ describe('Case 2 - No padding used', () => {
     it('Input 4: ["111", "222", "333"] should return 1', () => {
         expect(checkNumberPadding(["2", "1", "49", "73", "5"])).toBe(1);
     });
-
-    // Add a testcase where the number of 1s and other numbers is equal
 });
 
 
